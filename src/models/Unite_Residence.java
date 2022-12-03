@@ -1,9 +1,10 @@
 package models;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Unite_Residence {
-    private  String id_Unite;
+    private UUID id_Unite;
     private  String nom_Unite;
     private  String desc_Unite;
     private Type_Unite type;
@@ -11,18 +12,18 @@ public class Unite_Residence {
     public Unite_Residence() {
     }
 
-    public Unite_Residence(String id_Unite, String nom_Unite, String desc_Unite, Type_Unite type) {
-        this.id_Unite = id_Unite;
+    public Unite_Residence(String nom_Unite, String desc_Unite, Type_Unite type) {
+        this.id_Unite = new UUID(16,4);
         this.nom_Unite = nom_Unite;
         this.desc_Unite = desc_Unite;
         this.type = type;
     }
 
-    public String getId_Unite() {
+    public UUID getId_Unite() {
         return id_Unite;
     }
 
-    public void setId_Unite(String id_Unite) {
+    public void setId_Unite(UUID id_Unite) {
         this.id_Unite = id_Unite;
     }
 

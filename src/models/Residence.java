@@ -1,16 +1,23 @@
 package models;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Residence {
-    private  String id_residence;
+    private UUID id_residence;
     private  String nom_residence;
     private  String description_residence;
 
     public Residence() {
     }
 
-    public String getId_residence() {
+    public Residence(String nom_residence, String description_residence) {
+        this.id_residence=new UUID(16,4);
+        this.nom_residence = nom_residence;
+        this.description_residence = description_residence;
+    }
+
+    public UUID getId_residence() {
         return id_residence;
     }
 

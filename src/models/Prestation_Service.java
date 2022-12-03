@@ -1,9 +1,10 @@
 package models;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Prestation_Service {
-    private  String id_prest_serv;
+    private UUID id_prest_serv;
     private  String nom_prest;
     private  String desc_prest;
     private  String prix_base;
@@ -11,18 +12,18 @@ public class Prestation_Service {
     public Prestation_Service() {
     }
 
-    public Prestation_Service(String id_prest_serv, String nom_prest, String desc_prest, String prix_base) {
-        this.id_prest_serv = id_prest_serv;
+    public Prestation_Service(String nom_prest, String desc_prest, String prix_base) {
+        this.id_prest_serv = new UUID(16,4);
         this.nom_prest = nom_prest;
         this.desc_prest = desc_prest;
         this.prix_base = prix_base;
     }
 
-    public String getId_prest_serv() {
+    public UUID getId_prest_serv() {
         return id_prest_serv;
     }
 
-    public void setId_prest_serv(String id_prest_serv) {
+    public void setId_prest_serv(UUID id_prest_serv) {
         this.id_prest_serv = id_prest_serv;
     }
 

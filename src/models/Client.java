@@ -1,9 +1,10 @@
 package models;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Client {
-    private String id_client;
+    private UUID id_client;
     private  String nom_client;
     private  String prenom_client;
     private  String courriel_client;
@@ -15,9 +16,10 @@ public class Client {
     public Client() {
     }
 
+
+
     public Client(String nom_client, String prenom_client, String courriel_client, String date_naiss, String pays_residence, String ville_residence, String motif_sejour) {
-        int i= 1;
-        this.id_client = "clt"+i;
+        this.id_client = new UUID(16,4);
         this.nom_client = nom_client;
         this.prenom_client = prenom_client;
         this.courriel_client = courriel_client;
@@ -25,14 +27,14 @@ public class Client {
         this.pays_residence = pays_residence;
         this.ville_residence = ville_residence;
         this.motif_sejour = motif_sejour;
-        i++;
     }
 
-    public String getId_client() {
+
+    public UUID getId_client() {
         return id_client;
     }
 
-    public void setId_client(String id_client) {
+    public void setId_client(UUID id_client) {
         this.id_client = id_client;
     }
 

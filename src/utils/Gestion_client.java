@@ -1,9 +1,12 @@
 package utils;
 
+import models.Client;
+
 import java.util.Scanner;
+import java.util.Set;
 
 public class Gestion_client {
-   // private Set<Client> clients;
+   private Set<Client> clients;
     Scanner sc = new Scanner(System.in);
 
     public Gestion_client() {
@@ -13,7 +16,7 @@ public class Gestion_client {
     }
 
     public void creer(){
-        /*Client cltajout = new Client();
+        Client cltajout = new Client();
         System.out.println(" entrer le nom du client");
         cltajout.setNom_client(sc.nextLine());
         System.out.println(" entrer le prenom du client");
